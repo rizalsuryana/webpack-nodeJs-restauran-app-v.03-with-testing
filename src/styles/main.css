@@ -1,0 +1,348 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+img {
+  display: block;
+}
+.fotoResto{
+  width: 100%;
+}
+
+.judulHead{
+  min-width: 44px;
+  min-height: 44px;
+}
+
+header {
+  display: inline;
+  min-height: 56px;
+  transition: min-height 0.3s;
+  width: 100%;
+}
+
+/*nav tetap sepaket amamheader*/
+nav {
+  z-index: 100;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: 1fr;
+  background-color: #2192FF;
+  position: sticky;
+  top: 0;
+  box-shadow: 1px 1px 13px 2px rgba(5, 5, 5, 5);
+  height: 100%;
+  width: 100%;
+  padding: 20px 15px 25px 15px;
+}
+
+nav a {
+  font-size: 25px;
+  text-decoration: none;
+  min-height: 44px;
+  min-width: 44px;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 50px;
+  text-align: center;
+}
+
+/*fokus tab*/
+
+div[tabindex="0"]:focus {
+  outline: 3px dashed #38E54D;
+}
+
+nav a:hover {
+  font-weight: bold;
+  color: #38E54D;
+}
+
+a:focus {
+  outline: 3px dashed #38E54D;
+}
+
+button:focus {
+  outline: 3px dashed #2192FF;
+}
+
+
+.menuBar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+nav h1 {
+  min-width: 44px;
+  min-height: 44px;
+  padding-left: 10px;
+  font-size: 40px;
+  color: white;
+  font-size: 35px;
+  text-shadow: 0 1px black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.menuBar.open {
+  transform: translate(0, 0);
+}
+
+#smartButton {
+  color: #2192FF;
+  font-size: 44px;
+  margin: 10px auto;
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+  text-align: center;
+  min-height: 44px;
+  min-width: 44px;
+  border: none;
+  background-color: white;
+}
+
+.hero {
+  align-items: center;
+  min-height: 450px;
+  width: 100%;
+  text-align: center;
+}
+
+.hero .heroView {
+  padding: 20px;
+}
+
+.heroView img {
+  object-fit: cover;
+  height: 450px;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 1px 7px 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+figcaption {
+  margin-top: 10px;
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.explore {
+  width: 100%;
+  text-align: center;
+  background-color: #FDFF00;
+  padding: 20px;
+  color: black;
+  box-shadow: 1px 7px 10px 3px rgba(0, 0, 0, 0.2);
+  margin: 0;
+}
+
+.katalog {
+  border-radius: 5px;
+  width: 450px;
+  margin: 30px auto auto;
+  box-shadow: 1px 7px 10px 3px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+#listRestaurant {
+  display: grid;
+  grid-row-gap: 20px;
+}
+
+.skip-link {
+  z-index: 300;
+  position: absolute;
+  top: -45px;
+  min-width: 45px;
+  min-height: 45px;
+  background-color: #38E54D;
+  color: black;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  outline: dashed 5px #FDFF00;
+  top: 0;
+  text-align: center;
+  margin: 10px;
+}
+
+
+/* Output*/
+
+#contentArea {
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+.detailResto {
+  position: relative;
+  margin: 5px;
+}
+
+.kota {
+  position: absolute;
+  background-color: #FDFF00;
+  color: black;
+  margin: 5px 5px 5px 0;
+  padding: 3px 8px 3px 15px;
+  border-radius: 3px;
+  box-shadow: 1px 7px 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+.tombolDetail{
+  background-color: #38E54D;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 7px 10px 3px rgba(0, 0, 0, 0.2);
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.detailResto img {
+  height: 450px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 1px 7px 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+.rating {
+  margin: 10px;
+
+}
+
+.namaRestaurant {
+  padding: 0 10px 10px 10px;
+}
+
+.keterangan {
+  padding: 0 10px 30px 10px;
+  text-align: justify;
+}
+
+/* Detail */
+#halamanDetail{
+text-align: center;
+margin: 20px;
+box-shadow: 1px 7px 10px 3px rgba(0, 0, 0, 0.2);
+padding-bottom: 25px;
+margin-top: 10px;
+}
+
+.listRestaurant{
+  width: 100%;
+}
+
+#titleRestaurant{
+  margin-bottom: 20px;
+  background-color: #FDFF00;
+  padding: 30px;
+  box-shadow: 1px 7px 10px 3px rgba(0, 0, 0, 0.2);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#fotoRestaurant{
+  width: 100%;
+  margin: auto;
+  box-shadow: 1px 7px 10px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.loveButton {
+  position: relative;
+  bottom: 78px;
+  font-size: 60px;
+  color: red;
+  background-color: transparent;
+  border: none;
+  min-height: 44px;
+  min-width: 44px;
+  margin: auto;
+}
+
+.detailDetailRestaurant{
+  margin-bottom: 20px;
+  margin-top: -20px;
+}
+
+#detailLocation {
+  margin: 20px;
+}
+
+#detailDescription{
+  margin: 20px;
+}
+
+.isiDetail{
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: justify;
+}
+
+#menus{
+  margin: 20px;
+}
+
+#foodMenus{
+  margin: 10px;
+}
+#foods{
+  margin: 0 auto;
+}
+
+#drinks{
+  margin: 0 auto;
+}
+
+#review{
+  margin: 10px;
+}
+
+#reviewCustomer{
+  padding: 10px;
+}
+
+.komentar{
+  border-bottom: solid grey 0.1px;
+  padding: 10px;
+}
+
+.nameReview{
+  padding: 10px;
+}
+
+.dateReview{
+  margin-bottom: 5px;
+}
+
+.listRestaurantFavorite{
+  width: 100%;
+  display: grid;
+  grid-row-gap: 20px;
+  
+}
+
+
+footer {
+  margin: 0px;
+  background-color: #38E54D;
+  padding: 2em;
+  width: 100%;
+  text-align: center;
+  box-shadow: 1px 7px 10px 3px rgba(0, 0, 0, 0.2);
+}
